@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kérollyn Pires</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+
+    <style>
+        /*Reset básico*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Inter", sans-serif;
+            background-color: aquamarine;
+            color:black
+        }
+        header{
+            background-color: fuchsia;
+            color: aquamarine;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        header img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid  aquamarine;
+        }
+        nav{
+            background-color: fuchsia;
+            text-align: center;
+            padding: 10px 0;
+        }
+         main {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: fuchsia;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0,1);
+        }
+        section{
+            margin-bottom: 30px;
+        }
+        h2{
+            color: lightblue;
+            border-bottom: 2px solid ;
+            padding-bottom: 5px;
+        }
+        ul{
+            list-style-type: square;
+            padding-left: 20px ;
+        }
+        .social a {
+            color: fuchsia;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        video{ç
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        footer{
+            background-color: fuchsia;
+            color: aquamarine;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .social-media a {
+            color: fuchsia;
+            margin-right: 15px;
+            font-size: 28px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="" alt="">
+        <h1>Kérollyn Pires Ferreira</h1>
+        <p><em>Desenvolvedor web | Designer UI/UX</em></p>
+        <button id ="btnMotivacao">
+            Preciso de motivação!
+        </button>
+        <h2 id="mensagem"></h2>
+    </header>
+
+    <nav>
+        <a href="#">Sobre</a> |
+        <a heref="#">Habilidades</a> |
+        <a heref="#">Experiência</a> |
+        <a heref="#">Conntato</a> 
+    </nav>
+
+    <main>
+        <section>
+            <h2>Sobre Mim</h2>
+            <p>Temnho 16 anos, sou apaixonada por crianças e cabelos</p>
+        </section>
+        
+        <!--  cometa  jhjj -->
+        <section>
+            <h2>Experiencia profissionl</h2>
+            <ul>
+                <li>strong>Desenvolvedor Front-end</li><strong> - Agencia WebTech (2023-Atual)</strong>li>
+                </li><strong>Estudante</strong> - Tecnico Eletrotecnica (2024-2026)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Apresentação em vídeo</h2>
+            <video controls poster="https://via.placeholder.com/800x400">
+                <source src="meu_video.mp4"  type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </section>
+
+        <section>
+            <h2>Contato e Redes Sociais</h2>
+            <p><strong>Email:</strong> kerollynpires8@gmail.com</p>
+            <p><strong>Telefone:</strong> (27) 998919498</p>
+
+            <div>
+                <a href="#" target="_blank" title="linkedIn">linkedIn</a>
+                <a href="https://linkedin.com" target="_blank"  title="linkedIn">linkedin</a>
+                <a href="https://github.com" target="_blank"  title="github"></a>
+                <a href="https://instagram.com"  target="_blank" title="instagram">Instagram</a>
+            </div>
+        </section>
+
+        <section>
+            <h2> Entre em Contato</h2>
+            <form action="/enviar" method="POST">
+                <label for="name">Nome:</label>
+                <imput type="text" id="nome" name="nome" required>
+
+                    <button type="submit">|Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kérollyn Pires Ferreira Dão - Todos os direitos reservados.</p> 
+    </footer>
+
+    <script>
+       let frases = [
+        'Você consegue!',
+        'Acredite no seu potencial!',
+        'Cada dia é uma nova chance 

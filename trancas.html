@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Keth - Tranças</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --roxo1: #7b3fb6;
+            --roxo2: #9d65d0;
+            --roxo3: #f3e9ff;
+            --roxo4: #e9d9ff;
+            --texto: #3c2a4d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #faf7ff;
+            color: var(--texto);
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--roxo1), var(--roxo2));
+            padding: 25px 10px;
+            text-align: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        h2 {
+            color: var(--roxo1);
+            border-left: 5px solid var(--roxo1);
+            padding-left: 12px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* SOBRE */
+        .sobre-box {
+            background: var(--roxo3);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 12px rgba(123, 63, 182, 0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            animation: fadeIn 1s ease;
+        }
+
+        .sobre-box img {
+            width: 180px;
+            height: 180px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 3px solid var(--roxo1);
+        }
+
+        /* GALERIA */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .galeria img {
+            width: calc(25% - 10px);
+            min-width: 140px;
+            border-radius: 10px;
+            border: 2px solid var(--roxo4);
+            transition: 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        /* SERVIÇOS */
+        .servico {
+            background: var(--roxo4);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--roxo1);
+            animation: fadeInUp 0.7s ease;
+        }
+
+        /* BOTÃO WHATSAPP */
+        .whatsapp-btn {
+            display: block;
+            margin: 30px auto;
+            text-align: center;
+            background: #25d366;
+            padding: 14px 22px;
+            color: white;
+            font-size: 18px;
+            border-radius: 50px;
+            width: 250px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        /* ORÇAMENTO */
+        .orcamento-box {
+            background: var(--roxo3);
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 25px;
+            box-shadow: 0 0 12px rgba(123, 63, 182, 0.2);
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #bca6d6;
+            font-size: 16px;
+        }
+
+        button {
+            background: var(--roxo1);
+            color: white;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #6931a1;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+            background: var(--roxo1);
+            color: white;
+        }
+
+        /* ANIMAÇÕES */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(35px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 800px) {
+            .sobre-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            .sobre-box img {
+                width: 150px;
+                height: 150px;
+            }
+            .galeria img {
+                width: calc(50% - 10px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Studio Keth</h1>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#agendamento">Agendamento</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- SOBRE -->
+    <h2 id="sobre">Sobre a Keth</h2>
+    <div class="sobre-box">
+        <img src="img/fotodeperfil.jpeg" alt="Foto da Keth">
+
+        <div>
+            <p>
+                Keth é especialista em tranças e apaixonada pela arte de elevar a autoestima 
+                através do cuidado, da técnica e da delicadeza.
+            </p>
+            <p>
+                Seu estúdio foi criado para ser um espaço leve, acolhedor e cheio de personalidade 
+                onde cada cliente se sente valorizada, bonita e segura.
+            </p>
+            <p>
+                Com estilo marcante e toque suave, Keth transforma cada trança em um trabalho único.
+            </p>
+        </div>
+    </div>
+
+    <!-- GALERIA -->
+    <h2 id="galeria">Galeria</h2>
+    <div class="galeria">
+        <img src="img/foto1.jpeg">
+        <img src="img/foto2.jpeg">
+        <img src="img/foto3.jpeg">
+        <img src="img/foto4.jpeg">
+    </div>
+
+    <!-- SERVIÇOS -->
+    <h2 id="servicos">Serviços & Preços</h2>
+
+    <div class="servico">
+        <h3>Box Braids</h3>
+        <p>R$ 480 — 5 a 8 horas (depende da quantidade)</p>
+    </div>
+
+    <div class="servico">
+        <h3>Nago</h3>
+        <p>R$ 200 — 3 a 6 horas</p>
+    </div>
+
+    <div class="servico">
+        <h3>Twist</h3>
+        <p>R$ 120 — 2 a 4 horas</p>
+    </div>
+
+    <div class="servico">
+        <h3>Manutenção</h3>
+        <p>R$ 100 — 1 a 2 horas</p>
+    </div>
+
+    <!-- BOTÃO WHATSAPP -->
+    <a class="whatsapp-btn" id="contato" href="https://wa.me/5527998919498" target="_blank">
+        Agendar no WhatsApp
+    </a>
+
+    <!-- AGENDAMENTO -->
+    <h2 id="agendamento">Agendar Atendimento</h2>
+
+    <div class="orcamento-box">
+
+        <label>Seu nome:</label>
+        <input type="text" id="nomeCliente" placeholder="Seu nome">
+
+        <label>Escolha o serviço:</label>
+        <select id="servico">
+            <option value="Box Braids - R$480">Box Braids - R$480</option>
+            <option value="Nago - R$200">Nago - R$200</option>
+            <option value="Twist - R$120">Twist - R$120</option>
+            <option value="Manutenção - R$100">Manutenção - R$100</option>
+        </select>
+
+        <label>Dia desejado:</label>
+        <input type="date" id="data">
+
+        <button onclick="enviarWhats()">Enviar Agendamento</button>
+    </div>
+
+    <!-- ORÇAMENTO -->
+    <h2>Calcular Orçamento</h2>
+
+    <div class="orcamento-box">
+        <label for="valorServico">Escolha o serviço:</label>
+        <select id="valorServico">
+            <option value="480">Box Braids - R$480</option>
+            <option value="200">Nago - R$200</option>
+            <option value="120">Twist - R$120</option>
+            <option value="100">Manutenção - R$100</option>
+        </select>
+
+        <label for="qtde">Quantidade ou tamanho (1 a 5):</label>
+        <input type="number" id="qtde" min="1" max="5" value="1">
+
+        <button onclick="calcular()">Calcular orçamento</button>
+
+        <h3 id="resultado"></h3>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Studio Keth — Tranças feitas com amor, técnica e delicadeza.
+</footer>
+
+<script>
+function calcular() {
+    let servico = Number(document.getElementById("valorServico").value);
+    let qtde = Number(document.getElementById("qtde").value);
+
+    let total = servico * qtde;
+
+    document.getElementById("resultado").innerHTML =
+        "Valor estimado: <strong>R$ " + total.toFixed(2) + "</strong>";
+}
+
+function enviarWhats() {
+    let nome = document.getElementById("nomeCliente").value;
+    let servico = document.getElementById("servico").value;
+    let data = document.getElementById("data").value;
+
+    if (!nome || !data) {
+        alert("Preencha nome e data!");
+        return;
+    }
+
+    let mensagem = `Olá, meu nome é ${nome}. Quero agendar o serviço: ${servico} para o dia ${data}.`;
+
+    let url = "https://wa.me/5527998919498?text=" + encodeURIComponent(mensagem);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
